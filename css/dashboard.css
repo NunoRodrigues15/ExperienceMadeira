@@ -1,0 +1,67 @@
+body {
+  background-color: #DCDCDC;
+}
+
+canvas {
+  min-height: 300px;
+  min-width: 300px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 24vw;
+  height: 16vh;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgb(192, 192, 192);
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+  margin: 0.5rem;
+}
+
+.card-icon {
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  font-size: 5rem;
+}
+
+.card-title {
+  padding: 1.25rem;
+}
+
+.card-text {
+  padding: 1.25rem;
+}
+
+.card-big {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 24vw;
+  min-height: 16vh;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgb(192, 192, 192);
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+  margin: 0.5rem;
+  pading: 1.25rem;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
