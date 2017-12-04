@@ -2,13 +2,11 @@
     display: flex;
     width: 100%;
     min-height: 100vh;
-    z-index: 2;
 }
 
 .s-layout__content {
     margin: 1em;
     margin-top: 5em;
-    z-index: 2;
 }
 
 /*  --------------------------------------------------------------------------------------------------------------------------------------
@@ -16,7 +14,7 @@
     -------------------------------------------------------------------------------------------------------------------------------------- */
 
 .s-sidebar__trigger {
-    z-index: 20;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +30,6 @@
 }
 
 .s-sidebar__nav {
-    color: rgba(255, 255, 255, 0.7);
     position: fixed;
     top: 0;
     left: -15em;
@@ -41,7 +38,7 @@
     width: 15em;
     height: 100%;
     background: #008975;
-    z-index: 15;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .s-sidebar__nav:hover, .s-sidebar__nav:focus, .s-sidebar__trigger:focus+.s-sidebar__nav, .s-sidebar__trigger:hover+.s-sidebar__nav {
@@ -122,56 +119,12 @@
     -------------------------------------------------------------------------------------------------------------------------------------- */
 
 .s-layout__content {
-    min-height: calc(100vh - 1em);
-    overflow: hidden;
+  min-height: calc(100vh - 1em);
+  overflow: hidden;
 }
-
-.s-footer {
-    height: 4em;
-    width: calc(100% - 4em);
-    background-color: #cfcfcf;
-    color: white;
-    z-index: 5;
-    bottom: -4em;
-    left: 4em;
-    position: absolute;
-}
-
-.s-footer__column {
-    float: left;
-    width: 50%;
-    text-align: center;
-    color: black;
-}
-
-.s-footer__column > img {
-    margin-top: 0.5em;
-    height: 3em;
-    width: 3em;
-}
-
-.s-footer__column > p {
-    line-height: 2em;
-    margin: 1em 0 1em 0;
-}
-
-/*  --------------------------------------------------------------------------------------------------------------------------------------
-    Body
-    -------------------------------------------------------------------------------------------------------------------------------------- */
-
-.s-layout__madeiraBackground {
-    background-image: url("../img/background/madeirabackground.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    background-origin: border-box;
-    left: 4em;
-    filter: contrast(200%) brightness(50%);
-
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-
-    position: fixed;
-    display: block;
+.s-footer  {
+  height: 4em;
+  background-color: #cfcfcf;
+  color: white;
+  text-align: center;
 }
