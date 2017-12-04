@@ -1,5 +1,7 @@
 @import url("wrapContent.css");
 @import url("mainTiles.css");
+@import url("dashboard.css");
+@import url("masterDetail.css");
 
 html, body {
     font-family: 'Roboto', sans-serif;
