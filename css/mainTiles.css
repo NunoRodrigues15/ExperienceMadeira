@@ -1,8 +1,4 @@
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-}
+
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -11,7 +7,8 @@ body {
 .row {
     display: flex;
     flex-flow: row wrap;
-    margin: 2;
+    width: calc(100vw - 4em);
+    height: 100vw;
 }
 
 .row:last-child {
@@ -21,28 +18,40 @@ body {
 .column {
     display: flex;
     flex-flow: column;
+    margin: 0.5em;
+
 }
 
 .tile {
     float: left;
     position: relative;
     display: inline-block;
+    margin: 0.5em;
 }
 
 .tileL {
-    height: 80%;
+    height: calc(80% - 1em);
+    width: calc(50% - 1em);
 }
 
-.tileM {
-    height: 40%;
+.tileL2-top {
+    height: calc(50%);
+    width: calc(100%);
+    margin: 0 0 0.5em 0;
+}
+.tileL2-bottom {
+    height: calc(50%);
+    width: calc(100%);
+    margin: 0.5em 0 0 0;
 }
 
 .tileS {
-    height: 20%;
+    height: calc(20% - 1em);
+    width: calc(25% - 1em);
 }
 
-@media only screen and (max-width: 650px) {
-    /* Smartphone view: 1 tile */
+/*@media only screen and (max-width: 650px) {
+
     .tileL, .tileM, .tileS {
         width: 100%;
         height: 50%;
@@ -51,7 +60,7 @@ body {
 }
 
 @media only screen and (min-width: 651px) {
-    /* Small desktop / ipad view: 3 tiles */
+
     .tileL, .tileM {
         width: 50%;
     }
@@ -59,10 +68,12 @@ body {
         width: 25%;
         padding-bottom: 15%;
     }
-}
+}*/
 
 #levada1 {
-    background-image: url("levada1.jpg");
+    background-image: url("../levada1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #levada2 {
