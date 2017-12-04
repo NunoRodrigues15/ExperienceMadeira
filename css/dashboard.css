@@ -14,49 +14,38 @@ canvas {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 24vw;
-  height: 16vh;
+  width: calc(25% - (2 * 0.5em) - (2 * 1px));
+  height: calc(25% - (2 * 0.5em) - (2 * 1px));
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgb(192, 192, 192);
   border: 1px solid rgba(0, 0, 0, .125);
-  border-radius: .25rem;
-  margin: 0.5rem;
+  border-radius: .25em;
+  margin: 0.5em;
 }
 
 .card-icon {
   position: absolute;
   z-index: 1;
   right: 15px;
-  font-size: 5rem;
+  font-size: 5em;
 }
 
 .card-title {
-  padding: 1.25rem;
+  padding: 1.25em;
 }
 
 .card-text {
-  padding: 1.25rem;
+  padding: 1.25em;
 }
 
-.card-big {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 24vw;
-  min-height: 16vh;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgb(192, 192, 192);
-  border: 1px solid rgba(0, 0, 0, .125);
-  border-radius: .25rem;
-  margin: 0.5rem;
-  pading: 1.25rem;
+.card-h-2 {
+  height: calc(50% - (2 * 0.5em) - (2 * 1px));
+}
+
+.card-w-2{
+  width: calc(50% - (2 * 0.5em) - (2 * 1px));
 }
 
 .row {
