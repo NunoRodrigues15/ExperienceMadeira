@@ -13,8 +13,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 </head>
 <body>
+    <div class="s-layout__madeiraBackground"></div>
     <div class="s-layout">
         <div class="s-layout__sidebar">
             <a class="s-sidebar__trigger" href="#0">
@@ -25,17 +27,17 @@
                 <ul>
                     <li>
                         <a class="s-sidebar__nav-link" href="#0">
-                          <i class="fa fa-home"></i><em>Home</em>
+                          <i class="fa fa-home"></i><em>filter 1</em>
                         </a>
                     </li>
                     <li>
                         <a class="s-sidebar__nav-link" href="#0">
-                            <i class="fa fa-user"></i><em>My Profile</em>
+                            <i class="fa fa-user"></i><em>filter 2</em>
                         </a>
                     </li>
                     <li>
                         <a class="s-sidebar__nav-link" href="#0">
-                            <i class="fa fa-camera"></i><em>Camera</em>
+                            <i class="fa fa-camera"></i><em>filter 3</em>
                         </a>
                     </li>
                 </ul>
@@ -43,42 +45,30 @@
         </div>
         <main class="s-layout__content">
 
-
-            <div class="row">
-                <div class="tile tileL" id="levada1">
-                    <a href="#"></a>
-                </div>
-                <div class="tileL column">
-                    <div class="tile tileL2-top" id="levada2">
-                        <a href="#"></a>
-                    </div>
-                    <div class="tile tileL2-bottom" id="levada3">
-                        <a href="#"></a>
-                    </div>
-                </div>
-
-                <div class="tile tileS" id="levada4">
-                    <a href="#"></a>
-                </div>
-                <div class="tile tileS" id="levada5">
-                    <a href="#"></a>
-                </div>
-                <div class="tile tileS" id="levada6">
-                    <a href="#"></a>
-                </div>
-                <div class="tile tileS" id="levada7">
-                    <a href="#"></a>
-                </div>
-            </div>
-
-
+            <p>AQUI!</p>
 
         </main>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        <script src="js/client.js"></script>
+        <footer class="s-footer">
+            <div class="s-footer__column">
+                <p>
+                    <a href="#">Sobre Nós</a> |
+                    <a href="#">Mapa do Site</a> |
+                    <a href="#">Avisos Legais</a> |
+                    <a href="#">Contacte-nos</a>
+                </p>
+            </div>
+            <div class="s-footer__column">
+                <img src="img\logo\experiencemadeira.png" alt="Experience Madeira Logo">
+                <p class="adeira">adeira</p>
+            </div>
+
+        </footer>
     </div>
-    <footer class="s-footer">
-        <p>Footer</p>
-    </footer>
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/client.js"></script>
 </body>
 </html>
