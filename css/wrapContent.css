@@ -146,13 +146,18 @@
 
 .s-footer__column > img {
     margin-top: 0.5em;
-    height: 3em;
-    width: 3em;
+    height: 47px;
+    width: 64px;
 }
 
 .s-footer__column > p {
     line-height: 2em;
     margin: 1em 0 1em 0;
+}
+.s-footer__column > .adeira {
+    line-height: 2em;
+    margin: 1em 0 1em 0;
+    display:inline
 }
 
 /*  --------------------------------------------------------------------------------------------------------------------------------------
