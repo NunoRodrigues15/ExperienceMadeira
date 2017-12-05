@@ -1,7 +1,8 @@
-.master-detail{
+.master-detail {
   display: flex;
   margin: 0 0 0 4em !important;
   height: calc(100vh - 4em) !important;
+  min-height: unset;
 }
 
 .master {
@@ -20,6 +21,6 @@
   overflow: overlay;
 }
 
-.show-footer{
+.show-footer {
   bottom: 0 !important;
 }
