@@ -26,9 +26,9 @@
 }
 
 .s-sidebar__trigger>i {
-    display: inline-block;
-    margin: 1.5em 0 0 1.5em;
-    color: #192b3c;
+  display: inline-block;
+  margin: 1.5em 0 0 1.5em;
+  color: #192b3c;
 }
 
 .s-sidebar__nav {
@@ -45,76 +45,76 @@
 }
 
 .s-sidebar__nav:hover, .s-sidebar__nav:focus, .s-sidebar__trigger:focus+.s-sidebar__nav, .s-sidebar__trigger:hover+.s-sidebar__nav {
-    left: 0;
+  left: 0;
 }
 
 .s-sidebar__nav ul {
-    position: absolute;
-    top: 4em;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 15em;
+  position: absolute;
+  top: 4em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 15em;
 }
 
 .s-sidebar__nav ul li {
-    width: 100%;
+  width: 100%;
 }
 
 .s-sidebar__nav-link {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 4em;
-    text-decoration: none;
-    color: inherit;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4em;
+  text-decoration: none;
+  color: inherit;
 }
 
 .s-sidebar__nav-link em {
-    position: absolute;
-    top: 50%;
-    left: 4em;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  transform: translateY(-50%);
 }
 
 .s-sidebar__nav-link:hover {
-    background: #008975;
+  background: #008975;
 }
 
 .s-sidebar__nav-link>i {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 4em;
-    height: 4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
 }
 
 .s-sidebar__nav-link>i::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* For Mobile */
 
 @media (min-width: 42em) {
-    .s-layout__content {
-        margin: 1em;
-        margin-left: 5em;
-    }
-    /* Sidebar */
-    .s-sidebar__trigger {
-        width: 4em;
-    }
-    .s-sidebar__nav {
-        width: 4em;
-        left: 0;
-    }
-    .s-sidebar__nav:hover, .s-sidebar__nav:focus, .s-sidebar__trigger:hover+.s-sidebar__nav, .s-sidebar__trigger:focus+.s-sidebar__nav {
-        width: 15em;
-    }
+  .s-layout__content {
+    margin: 1em;
+    margin-left: 5em;
+  }
+  /* Sidebar */
+  .s-sidebar__trigger {
+    width: 4em;
+  }
+  .s-sidebar__nav {
+    width: 4em;
+    left: 0;
+  }
+  .s-sidebar__nav:hover, .s-sidebar__nav:focus, .s-sidebar__trigger:hover+.s-sidebar__nav, .s-sidebar__trigger:focus+.s-sidebar__nav {
+    width: 15em;
+  }
 }
 
 /*  --------------------------------------------------------------------------------------------------------------------------------------
