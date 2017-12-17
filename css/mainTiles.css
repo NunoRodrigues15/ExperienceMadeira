@@ -30,7 +30,8 @@ ul {
 }
 .boxes li {
   background-image: url("../levada1.jpg");
-  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
 }
