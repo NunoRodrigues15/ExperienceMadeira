@@ -14,6 +14,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
 </head>
 
 <body>
@@ -44,79 +47,50 @@
             </nav>
         </div>
         <main class="s-layout__content">
-            <ul class="boxes">
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class=”boxes__text-wrapper”>
-                        <h2>Case Study Title</h2>
-                        <p>A catchy description for our case study. We worked hard.</p>
-                    </div>
-                </li>
-            </ul>
+            <div class="row">
 
+                <div class="col-7 experienceHeader borderSection">
+                    <h1>Titulo da Experiência</h1>
+                </div>
 
+                <div class="col-5">
+                    <div class='container'>
+                        <div class='single-item'>
+                            <div>
+                                <h3>1</h3></div>
+                            <div>
+                                <h3>2</h3></div>
+                            <div>
+                                <h3>3</h3></div>
+                            <div>
+                                <h3>4</h3></div>
+                            <div>
+                                <h3>5</h3></div>
+                            <div>
+                                <h3>6</h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class=" col-7 borderSection">
+                    <ul class=" fa-ul fa-2x">
+                        <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+                        <li><i class="fa-li fa fa-spinner fa-spin "></i>List icons</li>
+                        <li><i class="fa-li fa fa-square "></i>List icons</li>
+                    </ul>
+                </div>
+            </div>
 
         </main>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript">
+            $(".single-item").slick({
+                dots: true
+            });
+        </script>
         <script src="js/client.js"></script>
     </div>
     <footer class="s-footer">

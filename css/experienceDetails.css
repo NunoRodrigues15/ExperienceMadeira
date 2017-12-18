@@ -1,0 +1,42 @@
+.container {
+    margin: 0;
+    width: 100%;
+    padding: 4px;
+    color: #333;
+    background: #419be0;
+    float: right;
+    height: 100%;
+}
+
+.slick-slide {
+    text-align: center;
+    color: #419be0;
+    background: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.borderSection {
+    border-bottom: 1px solid grey;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
