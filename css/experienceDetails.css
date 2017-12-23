@@ -1,11 +1,40 @@
-.container {
+* {
+    box-sizing: border-box;
+}
+
+.bodyContainer {
+    display: flex;
+}
+
+.borderSection {
+    border-bottom: 1px solid grey;
+}
+
+.boxSection {
+    border: 1px solid grey;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-left {
+    width: 58.33%;
+}
+
+.col-right {
+    width: 41.66%;
+}
+
+.carousel {
     margin: 0;
     width: 100%;
     padding: 4px;
     color: #333;
     background: #419be0;
     float: right;
-    height: 100%;
+    order: 1;
 }
 
 .slick-slide {
@@ -14,29 +43,30 @@
     background: white;
 }
 
-* {
-    box-sizing: border-box;
+.experienceHeader {
+    order: 2;
 }
 
-.borderSection {
-    border-bottom: 1px solid grey;
+.priceContainer {
+
+}
+.price{
+    margin-right: 55.5%;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-[class*="col-"] {
-    float: left;
+.button {
+    background-color: #F16664;
+    border: none;
     padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
+.buttonDate{
 
-.col-5 {
-    width: 41.66%;
-}
-
-.col-7 {
-    width: 58.33%;
 }

@@ -47,15 +47,50 @@
             </nav>
         </div>
         <main class="s-layout__content">
-            <div class="row">
+            <div class="bodyContainer">
 
-                <div class="col-7 experienceHeader borderSection">
-                    <h1>Titulo da Experiência</h1>
+                <div class="col-left">
+
+                    <div class="experienceHeader borderSection">
+                        <h1>Titulo da Experiência</h1>
+                    </div>
+
+                    <div class="borderSection">
+                        <ul class="atributesList fa-ul fa-2x">
+                            <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+                            <li><i class="fa-li fa fa-spinner fa-spin "></i>List icons</li>
+                            <li><i class="fa-li fa fa-square "></i>List icons</li>
+                        </ul>
+                    </div>
+
+                    <div class="borderSection">
+                        <h2>O que iremos fazer:</h2>
+                        <ul class="">
+                            <li>Descrição 1</li>
+                            <li>Descrição 2</li>
+                            <li>Descrição 3</li>
+                        </ul>
+                    </div>
+
+                    <div class="borderSection">
+                        <h2>Observações:</h2>
+                        <ul class="">
+                            <li>Requisito 1</li>
+                            <li>Requisito 2</li>
+                            <li>Requisito 3</li>
+                        </ul>
+                    </div>
+
+                    <div class="">
+                        <h2>Onde estaremos:</h2>
+                        <div id="map" style="width:400px;height:400px;background:yellow"></div>
+                    </div>
                 </div>
 
-                <div class="col-5">
-                    <div class='container'>
-                        <div class='single-item'>
+                <div class="col-right">
+
+                    <div class='carousel'>
+                        <div class='carouselItems'>
                             <div>
                                 <h3>1</h3></div>
                             <div>
@@ -70,27 +105,36 @@
                                 <h3>6</h3></div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class=" col-7 borderSection">
-                    <ul class=" fa-ul fa-2x">
-                        <li><i class="fa-li fa fa-check-square"></i>List icons</li>
-                        <li><i class="fa-li fa fa-spinner fa-spin "></i>List icons</li>
-                        <li><i class="fa-li fa fa-square "></i>List icons</li>
-                    </ul>
-                </div>
-            </div>
 
+                    <div class="priceContainer borderSection">
+                        <span class="price">31€ por pessoa</span>
+                        <button class="button buttonDate">Ver datas</button>
+                    </div>
+
+                </div>
+
+            </div>
         </main>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 
         <script type="text/javascript" src="slick/slick.min.js"></script>
         <script type="text/javascript">
-            $(".single-item").slick({
+            $(".carouselItems").slick({
                 dots: true
             });
         </script>
+        <script>
+            function myMap() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(51.5, -0.12),
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                }
+                var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
         <script src="js/client.js"></script>
     </div>
     <footer class="s-footer">
