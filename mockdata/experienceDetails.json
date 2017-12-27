@@ -1,0 +1,34 @@
+{
+    "header": "Levada do Ribeiro Frio",
+    "shortDescription": "Levada espetacular pelos belos caminhos do Ribeiro Frio",
+    "longDescription": "Levada espetacular pelos belos caminhos do Ribeiro Frio com a companhia de Guia super giro e divertido. Aproveite para respirar ar fundo, ao som dos passarinhos e das folhas das arvores da laurissilva. Não se esqueça de tirar muitas fotograficas para mais tarde partilhar com os seus netinhos",
+    "company": "USB Turistas",
+    "companyLogoImg": "#",
+    "price": {
+        "value": "99",
+        "unit": "EUR"
+    },
+    "requirements": {
+        "equipment": "ténis nike",
+        "age": "6"
+    },
+    "Atributs": {
+        "location": "Ribeiro Frio",
+        "level": "2",
+        "category": "Levada",
+        "duration": "2h"
+    },
+
+    "image": {
+        "cover": "http://images.walkmeguide.com/levada-da-ponta-do-pargo/levada_da_ponta_do_pargo_1501080219.jpg",
+        "others": [
+            {
+                "image": "http://images.walkmeguide.com/levada-da-ponta-do-pargo/levada_da_ponta_do_pargo_1501080219.jpg"
+            },
+            {
+                "image": "http://images.walkmeguide.com/levada-da-ponta-do-pargo/levada_da_ponta_do_pargo_1501080219.jpg"
+            }
+        ]
+    }
+
+}

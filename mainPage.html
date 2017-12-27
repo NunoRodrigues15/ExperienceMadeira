@@ -51,16 +51,11 @@
 
                 <div class="col-left">
 
-                    <div class="experienceHeader borderSection">
-                        <h1>Titulo da Experiência</h1>
+                    <div class="experienceHeader borderSection" id="experienceDetailsHeader">
                     </div>
 
-                    <div class="borderSection">
-                        <ul class="atributesList fa-ul fa-2x">
-                            <li><i class="fa-li fa fa-check-square"></i>List icons</li>
-                            <li><i class="fa-li fa fa-spinner fa-spin "></i>List icons</li>
-                            <li><i class="fa-li fa fa-square "></i>List icons</li>
-                        </ul>
+                    <div class="borderSection" id="experienceAtributes">
+
                     </div>
 
                     <div class="borderSection">
@@ -83,7 +78,7 @@
 
                     <div class="">
                         <h2>Onde estaremos:</h2>
-                        <div id="map" style="width:400px;height:400px;background:yellow"></div>
+                        <div id="map"></div>
                     </div>
                 </div>
 
@@ -91,18 +86,7 @@
 
                     <div class='carousel'>
                         <div class='carouselItems'>
-                            <div>
-                                <h3>1</h3></div>
-                            <div>
-                                <h3>2</h3></div>
-                            <div>
-                                <h3>3</h3></div>
-                            <div>
-                                <h3>4</h3></div>
-                            <div>
-                                <h3>5</h3></div>
-                            <div>
-                                <h3>6</h3></div>
+                            
                         </div>
                     </div>
 
@@ -119,9 +103,7 @@
 
         <script type="text/javascript" src="slick/slick.min.js"></script>
         <script type="text/javascript">
-            $(".carouselItems").slick({
-                dots: true
-            });
+
         </script>
         <script>
             function myMap() {
