@@ -3,7 +3,7 @@
 }
 
 .bodyContainer {
-    display: flex;
+
 }
 
 .borderSection {
@@ -47,10 +47,9 @@
     order: 2;
 }
 
-.priceContainer {
+.priceContainer {}
 
-}
-.price{
+.price {
     margin-right: 55.5%;
 }
 
@@ -67,6 +66,15 @@
     margin: 4px 2px;
     cursor: pointer;
 }
-.buttonDate{
+
+.buttonDate {}
+
+#map {
+    width: 400px;
+    height: 400px;
+    background: yellow
+}
+
+@media query and(min-){
 
 }
