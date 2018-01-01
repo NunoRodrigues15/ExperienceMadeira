@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-.bodyContainer {
-
-}
-
 .borderSection {
     border-bottom: 1px solid grey;
 }
@@ -27,6 +23,10 @@
     width: 41.66%;
 }
 
+#experienceDescription {
+    text-align: justify;
+}
+
 .carousel {
     margin: 0;
     width: 100%;
@@ -34,7 +34,6 @@
     color: #333;
     background: #419be0;
     float: right;
-    order: 1;
 }
 
 .slick-slide {
@@ -42,12 +41,15 @@
     color: #419be0;
     background: white;
 }
-
-.experienceHeader {
-    order: 2;
+.slick-slide img{
+  width:100%;
 }
 
-.priceContainer {}
+.experienceHeader {
+    font-size: 32px !important;
+    line-height: 40px !important;
+    letter-spacing: -0.6px !important;
+}
 
 .price {
     margin-right: 55.5%;
@@ -67,14 +69,8 @@
     cursor: pointer;
 }
 
-.buttonDate {}
-
 #map {
     width: 400px;
     height: 400px;
     background: yellow
-}
-
-@media query and(min-){
-
 }

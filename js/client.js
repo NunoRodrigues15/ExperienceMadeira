@@ -1,49 +1,25 @@
 $(window).ready(
     function() {
-
-        createExperiences();
+        createTiles();
 
     }
 );
 
-function createExperiences() {
-
-    $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/experienceDetails.json',
+function createTiles() {
+    $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/experiences.json',
         function(data) {
-            var experienceTitle = $("#experienceDetailsHeader");
-            experienceTitle.append("<h1>" + data.header + "</h1>");
-
-            $("#experienceAtributes").append("<ul class='atributesList fa-ul fa-2x'>" +
-                "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.location + "</li>" +
-                "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.level + "</li>" +
-                "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.category + "</li>" +
-                "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.duration + "</li>" +
-                "</ul>");
-
-            $("#experienceDescription").append("<h2>O que iremos fazer:</h2>" +
-                "<p>" + data.longDescription + "</p>");
-
-            $("#experienceRequirements").append("<h2>Observações:</h2>" +
-                "<ul class=''>" +
-                "<li>" + data.requirements.equipment + "</li>" +
-                "<li>" + data.requirements.age + "</li>" +
-
-                "</ul>");
-
-            var carousel = $('.carouselItems');
-
-            carousel.append("<div> <img src='" + data.image.cover + "'></img></div>");
-
-            $(data.image.others).each(function(i, item) {
-                carousel.append("<div> <img src='" + data.image.others[i].image + "'></img></div>");
+            $(data.Experiences).each(function(i, item) {
+                $("#experienceTiles").append("<li> <div class='boxes__text-wrapper'>" +
+                    "<h2 onclick=navigatetoDetails('" + data.Experiences[i].id + "')>" + data.Experiences[i].header + "</h2>" + "<p>" + data.Experiences[i].subheader + "</p> </div> </li>");
             });
-
-            carousel.slick({
-                dots: true,
-                arrows: true
-            });
-
         });
+}
 
-
+function navigatetoDetails(id) {
+    var pathname = window.location.pathname;
+    var splitPath = pathname.split("/");
+    var path = "";
+    for (var i = 0; i < splitPath.length - 1; i++) path = path + splitPath[i] + "/";
+    path = path + "detail.html?" + id;
+    window.location.href = path;
 }
