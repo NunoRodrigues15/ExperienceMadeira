@@ -1,6 +1,7 @@
 $(window).ready(
     function() {
         createExperiences();
+        myMap();
 
     }
 );
@@ -11,9 +12,10 @@ function createExperiences() {
         function(data) {
 
             var experienceTitle = $("#experienceDetailsHeader");
-            experienceTitle.append("<h1>" + data.header + "</h1>");
+            experienceTitle.append("<h1 id='experienceDetailTitle'>" + data.header + "</h1>");
+            experienceTitle.append("<p id='experienceShortDescr'>" + data.shortDescription + "</p>");
 
-            $("#experienceAtributes").append("<ul class='atributesList fa-ul fa-2x'>" +
+            $("#experienceAtributes").append("<ul class='atributesList fa-ul'>" +
                 "<li><i class='fa-li fa fa-map-signs'></i>" + data.Atributs.location + "</li>" +
                 "<li><i class='fa-li fa fa-line-chart'></i>" + data.Atributs.level + "</li>" +
                 "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.category + "</li>" +
@@ -24,29 +26,39 @@ function createExperiences() {
                 "<p>" + data.longDescription + "</p>");
 
             $("#experienceRequirements").append("<h2>Observações:</h2>" +
-                "<ul class='fa-ul fa-1x'>" +
+                "<ul class='fa-ul requirementsList'>" +
                 "<li><i class='fa-li fa fa-exclamation-triangle'></i>" + data.requirements.equipment + "</li>" +
                 "<li><i class='fa-li fa fa-user-o'></i>" + data.requirements.age + "</li>" +
                 "</ul>");
-            $("#priceSection").append("<span class='price'>" + data.price.value + data.price.unit + "&emsp;por pessoa</span>");
-            $("#priceSection").append("<button class='button buttonDate'>Ver datas</button>");
 
-            var carousel = $('.carouselItems');
+            $("#mapSection").append("<h2>Onde estaremos:</h2>" +
+                "<div id='map'></div>");
 
+        $("#priceSection").append("<div class='price'>" + "<p>" + data.price.value + data.price.unit + " por pessoa</p>" + "<//div>");
+        $("#priceSection").append("<div class='dateButton'> " + "<button class='button buttonPos'>Ver datas</button>" + "</div");
 
+        var carousel = $('.carouselItems');
 
-            $(data.image.others).each(function(i, item) {
-                carousel.append("<div>" + " <img src='" + data.image.others[i].image + "'></img>" + "</div>");
-            });
-
-            carousel.slick({
-                slidesToShow: 1,
-                dots: true,
-                arrows: true
-            });
-
-            $(".fb-comments").attr("data-href", window.location.href);
-            $(".fb-comments").attr("data-width", $(".col-right").width());
+        $(data.image.others).each(function(i, item) {
+            carousel.append("<div>" + " <img src='" + data.image.others[i].image + "'></img>" + "</div>");
         });
 
+        carousel.slick({
+            slidesToShow: 1,
+            dots: true,
+            arrows: true
+        });
+
+        $(".fb-comments").attr("data-href", window.location.href); $(".fb-comments").attr("data-width", $(".col-right").width());
+    });
+
+}
+
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }

@@ -2,7 +2,13 @@
     box-sizing: border-box;
 }
 
+.bodyContainer {
+    z-index: -1 !important;
+}
+
 .borderSection {
+    padding-top: 1em;
+    padding-bottom: 1em;
     border-bottom: 1px solid grey;
 }
 
@@ -41,18 +47,33 @@
     color: #419be0;
     background: white;
 }
-.slick-slide img{
-  width:100%;
+
+.slick-slide img {
+    width: 100%;
 }
 
-.experienceHeader {
-    font-size: 32px !important;
-    line-height: 40px !important;
-    letter-spacing: -0.6px !important;
+#experienceDetailTitle {
+    padding-top: 0;
+    font-size: 2.5em !important;
+}
+
+.priceContainer {
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
 }
 
 .price {
-    margin-right: 55.5%;
+    float: left;
+    width: 50%;
+}
+
+.dateButton {
+    display: inline;
+    margin-top: 5px;
+    width: 50%;
 }
 
 .button {
@@ -69,8 +90,23 @@
     cursor: pointer;
 }
 
+.buttonPos {
+    position: relative;
+    right: -40%;
+}
+
 #map {
     width: 400px;
     height: 400px;
     background: yellow
+}
+
+.atributesList {
+    font-size: 1.5em;
+    z-index: -1 !important;
+}
+
+.requirementsList {
+    font-size: 1.3em;
+    z-index: -1 !important;
 }

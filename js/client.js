@@ -9,8 +9,8 @@ function createTiles() {
     $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/experiences.json',
         function(data) {
             $(data.Experiences).each(function(i, item) {
-                $("#experienceTiles").append("<li> <div class='boxes__text-wrapper'>" +
-                    "<h2 onclick=navigatetoDetails('" + data.Experiences[i].id + "')>" + data.Experiences[i].header + "</h2>" + "<p>" + data.Experiences[i].subheader + "</p> </div> </li>");
+                $("#experienceTiles").append("<li onclick=navigatetoDetails('" + data.Experiences[i].id + "') class='pointer'> <div class='boxes__text-wrapper'>" +
+                    "<h2 >" + data.Experiences[i].header + "</h2>" + "<p>" + data.Experiences[i].subheader + "</p> </div> </li>");
             });
         });
 }

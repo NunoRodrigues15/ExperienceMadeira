@@ -1,7 +1,6 @@
 @import url("wrapContent.css");
 @import url("mainTiles.css");
 @import url("experienceDetails.css");
-
 html, body {
     color: #484848;
     font-family: 'Roboto', sans-serif;
@@ -10,6 +9,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    letter-spacing: -0.6px !important;
 }
 
 /* Primary Styles */
@@ -20,6 +20,7 @@ html, body {
 
 h1 {
     font-size: 1.4em;
+    margin: 0 !important;
 }
 
 em {
