@@ -1,7 +1,7 @@
 $(window).ready(
     function() {
         createExperiences();
-        myMap();
+        // myMap();
 
     }
 );
@@ -35,7 +35,7 @@ function createExperiences() {
                 "<div id='map'></div>");
 
         $("#priceSection").append("<div class='price'>" + "<p>" + data.price.value + data.price.unit + " por pessoa</p>" + "<//div>");
-        $("#priceSection").append("<div class='dateButton'> " + "<button class='button buttonPos'>Ver datas</button>" + "</div");
+        $("#priceSection").append("<div class='dateButton'> " + "<button class='button buttonPos' onclick=navigatetoCheckout('"+window.location.search.substring(1)+"')>Ver datas</button>" + "</div");
 
         var carousel = $('.carouselItems');
 
@@ -54,11 +54,19 @@ function createExperiences() {
 
 }
 
-function myMap() {
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.12),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.HYBRID
-    }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+// function myMap() {
+//     var mapOptions = {
+//         center: new google.maps.LatLng(51.5, -0.12),
+//         zoom: 10,
+//         mapTypeId: google.maps.MapTypeId.HYBRID
+//     }
+//     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+// }
+function navigatetoCheckout(id) {
+    var pathname = window.location.pathname;
+    var splitPath = pathname.split("/");
+    var path = "";
+    for (var i = 0; i < splitPath.length - 1; i++) path = path + splitPath[i] + "/";
+    path = path + "checkout.html?" + id;
+    window.location.href = path;
 }

@@ -1,6 +1,8 @@
 @import url("wrapContent.css");
 @import url("mainTiles.css");
 @import url("experienceDetails.css");
+@import url("checkout.css");
+
 html, body {
     color: #484848;
     font-family: 'Roboto', sans-serif;
@@ -11,8 +13,6 @@ html, body {
     padding: 0;
     letter-spacing: -0.6px !important;
 }
-
-/* Primary Styles */
 
 *, *::before, *::after {
     box-sizing: border-box;
