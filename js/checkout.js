@@ -7,7 +7,7 @@ $(window).ready(
 
 function createCheckout() {
 
-    $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/' + window.location.search.substring(1) + '.json',
+    $.getJSON('http://experiencemadeira.jpborges.pt/mockdata/' + window.location.search.substring(1) + '.json',
         function(data) {
             var carousel = $('.carouselItems');
 
@@ -32,7 +32,7 @@ function createCheckout() {
                 "<li><i class='fa-li fa fa-clock-o'></i>" + data.Atributs.duration + "</li>" +
                 "</ul>");
         });
-    $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/' + window.location.search.substring(1) + 'Availability.json',
+    $.getJSON('http://experiencemadeira.jpborges.pt/mockdata/' + window.location.search.substring(1) + 'Availability.json',
         function(data) {
             $(".dateSelectionTitle").append("<h1> Selecione o dia a reservar: </h1>");
 

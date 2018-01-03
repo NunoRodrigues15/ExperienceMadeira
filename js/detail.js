@@ -8,7 +8,7 @@ $(window).ready(
 
 function createExperiences() {
 
-    $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/' + window.location.search.substring(1) + '.json',
+    $.getJSON('http://experiencemadeira.jpborges.pt/mockdata/' + window.location.search.substring(1) + '.json',
         function(data) {
 
             var experienceTitle = $("#experienceDetailsHeader");
