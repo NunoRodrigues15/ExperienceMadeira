@@ -65,7 +65,8 @@
     justify-content: center;
     font-size: 1em;
 }
-.highlightAvailableDates{
-    background-color: #80aaff;
+.highlightAvailableDates a{
+    background-color: #80aaff !important;
+    color: #ffffff !important;
 
 }

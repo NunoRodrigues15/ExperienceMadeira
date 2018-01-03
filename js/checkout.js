@@ -35,38 +35,49 @@ function createCheckout() {
     $.getJSON('http://localhost/projetoACR/ACR%20Code/mockdata/' + window.location.search.substring(1) + 'Availability.json',
         function(data) {
             $(".dateSelectionTitle").append("<h1> Selecione o dia a reservar: </h1>");
-
-            var availableDates;
+            var availableDates = new Array();
             $(data.availability).each(function(i, item) {
-                availableDates.append(data.availability[i].date);
+                availableDates.push(data.availability[i].date);
             });
             var $j = jQuery.noConflict();
-            $j("#datepicker").datepicker({
+
+
+            // Initialize datepicker
+            var today = new Date();
+
+
+            $j('#datepicker').datepicker({
+
+                minDate: today,
+                defaultDate: +1,
                 beforeShowDay: function(date) {
-                    // check if date is in your array of dates
-                    if ($.inArray(date, availableDates)) {
-                        // if it is return the following.
-                        return [true, 'highlightAvailableDates'];
-                    } else {
-                        // default
-                        return [true, ''];
+                    var month = date.getMonth() + 1;
+                    var year = date.getFullYear();
+                    var day = date.getDate();
+
+                    // Change format of date
+                    var newdate = day + "/" + month + "/" + year;
+
+                    // Check date in Array
+                    if (jQuery.inArray(newdate, availableDates) != -1) {
+                        return [true, "highlightAvailableDates"];
                     }
+                    return [true];
                 }
             });
-            
-            $(".hourSelectionTitle").append("<h1> Selecione a hora a reservar: </h1>");
 
 
-            $("#hourPicker").append("<div class=''> " + "<button class='hourButton '>" + "</button>" + "</div");
-        }
-    );
+            //     $(".hourSelectionTitle").append("<h1> Selecione a hora a reservar: </h1>");
+            //
+            //     $("#hourPicker").append("<div class=''> " + "<button class='hourButton '>" + "</button>" + "</div");
+        });
 
 
 }
 
-function updateHour() {
-    if
-}
+// function updateHour() {
+//     if
+// }
 // function myMap() {
 //     var mapOptions = {
 //         center: new google.maps.LatLng(51.5, -0.12),
