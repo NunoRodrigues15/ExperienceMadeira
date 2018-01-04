@@ -11,18 +11,18 @@ function createFilters() {
         function(data) {
 
             $(data).each(function(i, item) {
-                $("#categories").append("<button class='categoryButton flexButton' onClick='redirect()'>" +
+                $("#categories").append("<button class='categoryButton flexButton' onClick='redirect("+data[i].id+")'>" +
                 "<i class='fa "+data[i].description+"' aria-hidden='true'></i>"+ data[i].name + "</button>");
             });
             $("#search").append("<button class='searchButton' onClick='redirect()'>"+ "<i class='fa fa-search iconSearch' aria-hidden='true'></i>" + "Pesquisar" +"</button>");
 });
 }
 
-function redirect(){
+function redirect(id){
     var pathname = window.location.pathname;
     var splitPath = pathname.split("/");
     var path = "";
     for (var i = 0; i < splitPath.length - 1; i++) path = path + splitPath[i] + "/";
-    path = path + "main.html?";
+    path = path + "main.html?" + id;
     window.location.href = path;
 }
