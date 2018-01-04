@@ -5,8 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable{
     use Notifiable;
 
     /**
@@ -15,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','first_name', 'last_name','avatar_id','role_id'
     ];
 
     /**
@@ -23,7 +22,22 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $hidden = ['password', 'remember_token'];
+
+    public function role(){
+        return $this->belongsTo('App\role');
+    }
+
+    public function avatar(){
+        return $this->belongsTo('App\avatar');
+    }
+
+    public function company(){
+        return $this->hasOne('App\company');
+    }
+
+    public function reservation(){
+        return $this->hasMany('App\reservation');
+    }
+
 }
