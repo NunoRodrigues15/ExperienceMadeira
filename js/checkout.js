@@ -82,6 +82,8 @@ function createCheckout() {
             $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
             $j("#nReservationPicker").append("<input type='number' class='nReservation' min='1' max'5' value='1'>");
 
+            $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
+
 
         });
 }
