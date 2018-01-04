@@ -52,7 +52,7 @@ class categoriesController extends Controller
     {
 
         $experience = DB::table('experiences')
-                ->where('category_id', '=', $category->id)
+                ->where('categories_id', '=', $category->id)
                 ->get();
                 return response($experience, 200);
     }
