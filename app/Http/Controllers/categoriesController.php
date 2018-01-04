@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\category;
+use App\experience;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class categoriesController extends Controller
 {
@@ -14,7 +17,8 @@ class categoriesController extends Controller
      */
     public function index()
     {
-        //
+        $category = category::all();
+        return response($category, 200);
     }
 
     /**
@@ -46,7 +50,11 @@ class categoriesController extends Controller
      */
     public function show(category $category)
     {
-        //
+
+        $experience = DB::table('experiences')
+                ->where('category_id', '=', $category->id)
+                ->get();
+                return response($experience, 200);
     }
 
     /**
