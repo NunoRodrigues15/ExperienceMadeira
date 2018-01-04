@@ -10,7 +10,7 @@ function createFilters() {
     $.getJSON('http://experiencemadeira.jpborges.pt/public/categories',
         function(data) {
 
-            $(data.Experiences).each(function(i, item) {
+            $(data).each(function(i, item) {
                 $("#categories").append("<button class='categoryButton flexButton' onClick='redirect()'>" +
                 "<i class='fa "+data[i].description+"' aria-hidden='true'></i>"+ data[i].name + "</button>");
             });
