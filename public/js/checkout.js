@@ -4,14 +4,15 @@ $(window).ready(
 
     }
 );
+var $j = jQuery.noConflict();
 
 function createCheckout() {
 
-    $.getJSON('http://experiencemadeira.jpborges.pt/mockdata/' + window.location.search.substring(1) + '.json',
+    $j.getJSON('http://localhost/projetoACR/ACR%20Code/public/mockdata/' + window.location.search.substring(1) + '.json',
         function(data) {
-            var carousel = $('.carouselItems');
+            var carousel = $j('.carouselItems');
 
-            $(data.image.others).each(function(i, item) {
+            $j(data.image.others).each(function(i, item) {
                 carousel.append("<div>" + " <img src='" + data.image.others[i].image + "'></img>" + "</div>");
             });
 
@@ -21,25 +22,25 @@ function createCheckout() {
                 arrows: true
             });
 
-            var experienceTitle = $("#experienceDetailsHeader");
+            var experienceTitle = $j("#experienceDetailsHeader");
             experienceTitle.append("<h3 id='experienceDetailTitle'>" + data.header + "</h3>");
             experienceTitle.append("<p id='experienceShortDescr'>" + data.shortDescription + "</p>");
 
-            $("#experienceAtributes").append("<ul class='atributesList fa-ul'>" +
+            $j("#experienceAtributes").append("<ul class='atributesList fa-ul'>" +
                 "<li><i class='fa-li fa fa-map-signs'></i>" + data.Atributs.location + "</li>" +
                 "<li><i class='fa-li fa fa-line-chart'></i>" + data.Atributs.level + "</li>" +
                 "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.category + "</li>" +
                 "<li><i class='fa-li fa fa-clock-o'></i>" + data.Atributs.duration + "</li>" +
                 "</ul>");
         });
-    $.getJSON('http://experiencemadeira.jpborges.pt/mockdata/' + window.location.search.substring(1) + 'Availability.json',
+    $j.getJSON('http://localhost/projetoACR/ACR%20Code/public/mockdata/' + window.location.search.substring(1) + 'Availability.json',
         function(data) {
-            $(".dateSelectionTitle").append("<h1> Selecione o dia a reservar: </h1>");
+            $j(".dateSelectionTitle").append("<h1> Selecione o dia a reservar: </h1>");
             var availableDates = new Array();
-            $(data.availability).each(function(i, item) {
+            $j(data.availability).each(function(i, item) {
                 availableDates.push(data.availability[i].date);
             });
-            var $j = jQuery.noConflict();
+
             // Initialize datepicker
             var today = new Date();
             $j('#datepicker').datepicker({
@@ -80,9 +81,14 @@ function createCheckout() {
 
             $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
             $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
-            $j("#nReservationPicker").append("<input type='number' class='nReservation' min='1' max'5' value='1'>");
+            $j("#nReservationPicker").append("<input type='number' id='quantity' class='nReservation' min='1' max'5' value='1'>");
+        });
+    $j.getJSON('http://localhost/projetoACR/ACR%20Code/public/mockdata/' + window.location.search.substring(1) + '.json',
+        function(data) {
 
             $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
+            $j("#checkoutPicker").append("<h3>" + data.price.value * ($j("#quantity").val()) + data.price.unit + "</h3>");
+            $j("#checkoutPicker").append("<button class='checkoutButton'>" + "Reserve já" + "</button>");
 
         });
 }

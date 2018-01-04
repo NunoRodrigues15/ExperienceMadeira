@@ -35,6 +35,7 @@
     color: #333;
     background: #007D8C;
     float: right;
+    border-radius: 8px;
 }
 
 .slick-slide {
@@ -120,18 +121,56 @@
     font-size: 1em !important;
     padding-bottom: 0 !important;
 }
-#nReservationPicker{
+
+#nReservationPicker {
     margin-top: 1em;
     display: flex;
     flex-flow: row;
     align-items: center;
 }
+
 .iconPerson {
     font-size: 5em !important;
     margin-right: 1em;
 }
-.nReservation{
-    border-radius: 8px;
-    font-size: 0.7em;
 
+.nReservation {
+    border-radius: 8px;
+    width: 4em;
+    height: 3em;
+    font-size: 1em;
+}
+
+#checkoutSelection {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.checkoutSelectionTitle {
+    justify-content: center;
+    font-size: 2em !important;
+    padding-bottom: 0 !important;
+}
+
+#checkoutPicker {
+    margin-top: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 2em;
+}
+
+.checkoutButton {
+    background-color: #F16664;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 1em;
+    cursor: pointer;
 }
