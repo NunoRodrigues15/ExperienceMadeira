@@ -70,7 +70,6 @@ function createCheckout() {
             // Change format of date
             var selectedDate = day + "/" + month + "/" + year;
 
-
             $j(data.availability).each(function(i, item) {
                 if (data.availability[i].date == selectedDate) {
                     $j(data.availability[i].time).each(function(j, item) {
@@ -78,6 +77,11 @@ function createCheckout() {
                     });
                 }
             });
+
+            $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
+            $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
+            $j("#nReservationPicker").append("<input type='number' class='nReservation' min='1' max'5' value='1'>");
+
 
         });
 }

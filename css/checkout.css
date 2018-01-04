@@ -17,16 +17,15 @@
 
 .col-left {
     width: 60%;
-    margin:10px;
+    margin: 10px;
     border: 2px solid #007D8C;
     border-radius: 8px;
-
 }
 
 .col-right {
     float: right;
     width: 35%;
-
+    right: 0;
 }
 
 .carousel {
@@ -40,7 +39,7 @@
 
 .slick-slide {
     text-align: center;
-    color:#007D8C;
+    color: #007D8C;
     background: white;
 }
 
@@ -82,6 +81,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-top: 1em;
 }
 
 .hourSelectionTitle {
@@ -89,11 +89,13 @@
     font-size: 1em !important;
     padding-bottom: 0 !important;
 }
-#hourPicker{
-display: flex;
-flex-flow: row;
+
+#hourPicker {
+    display: flex;
+    flex-flow: row;
 }
-.hourButton{
+
+.hourButton {
     background-color: #007D8C;
     border: none;
     padding: 15px;
@@ -103,7 +105,31 @@ flex-flow: row;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 10px;
+    margin: 1em;
     cursor: pointer;
+}
 
+#nReservationSelection {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.nReservationSelectionTitle {
+    justify-content: center;
+    font-size: 1em !important;
+    padding-bottom: 0 !important;
+}
+#nReservationPicker{
+    margin-top: 1em;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.iconPerson {
+    font-size: 5em !important;
+    margin-right: 1em;
+}
+.nReservation{
+    border-radius: 8px;
 }
