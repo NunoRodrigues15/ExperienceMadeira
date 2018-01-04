@@ -6,3 +6,15 @@
 Homestead.json
 Homestead.yaml
 .env
+<<<<<<< HEAD
+=======
+storage/logs/laravel.log
+storage/framework/views/b053a5f52dd37ee13f6b0efba0fc97a6375ebb3e.php
+storage/framework/views/630a0da1c338d661baecff849204154207e84223.php
+storage/framework/views/60bca597ef256bca44646c58446247d237ae01eb.php
+storage/framework/views/045b11b2293faa31eb5cfd6013c992871b394f1f.php
+storage/framework/views/03d0e99d3624d5b621fff2b151f03d987675540f.php
+storage/framework/sessions/jGXiyUEUnQcmL3SJhZj6iwgnhHRxCZMWwNQEuVrI
+storage/framework/sessions/gt1UB1reBngSBP8qTtyyGr9rbpt67yGigckwBFlI
+bootstrap/cache/services.php
+>>>>>>> dev_frontend
