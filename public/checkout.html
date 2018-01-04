@@ -38,11 +38,6 @@
                             <i class="fa fa-user"></i><em>My Profile</em>
                         </a>
                     </li>
-                    <li>
-                        <a class="s-sidebar__nav-link" href="#0">
-                            <i class="fa fa-camera"></i><em>Camera</em>
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -50,7 +45,7 @@
             <div class="bodyContainer">
 
                 <div class="col-left">
-                    <div  id="dateSelection">
+                    <div id="dateSelection">
                         <div class="borderSection dateSelectionTitle"></div>
                         <div id="datepicker"></div>
                     </div>
@@ -63,8 +58,18 @@
                         <div id="nReservationPicker"></div>
                     </div>
                     <div id="checkoutSelection">
-                        <div class="borderSection checkoutSSelectionTitle"></div>
+                        <div class="borderSection checkoutSelectionTitle"></div>
                         <div id="checkoutPicker"></div>
+                    </div>
+                    <div id="confirmModal" class="modal">
+                        <div class="modal-content">
+                            <i class="fa fa-check iconConfirm" aria-hidden="true"></i>
+                            <p id="reserveDate"> </p>
+                            <p id="reserveHour"> </p>
+                            <p id="infoReservation"> </p>
+                            <p id="infoReservation2"> </p>
+                            <button class="concludeButton" onclick="redirect()"> <i class="fa fa-check " aria-hidden="true"></i>Concluído </button>
+                        </div>
                     </div>
 
                 </div>
@@ -74,10 +79,10 @@
 
                         </div>
                     </div>
-                    <div class="borderSection" id="experienceDetailsHeader">
+                    <div id="experienceDetailsHeader">
 
                     </div>
-                    <div id="experienceAtributes">
+                    <div id="experienceCheckoutAtributes">
 
                     </div>
                 </div>
