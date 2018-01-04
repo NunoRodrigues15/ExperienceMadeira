@@ -6,15 +6,18 @@ $(window).ready(
 );
 
 function createTiles() {
+
     $.getJSON('http://localhost/projetoACR/ACR%20Code/public/mockdata/experiences.json',
         function(data) {
             $(data.Experiences).each(function(i, item) {
-                $("#experienceTiles").append("<li onclick=navigatetoDetails('" + data.Experiences[i].id + "') class='pointer'> <div class='boxes__text-wrapper'>" +
-                    " <img class= 'tilesPhoto' src='" +
-                    data.Experiences[i].photo +"' > </img>" +
+
+                $("#experienceTiles").append("<li onclick=navigatetoDetails('" + data.Experiences[i].id + "') class='pointer' id='exp"+i+"'> <div class='boxes__text-wrapper'>" +
+
                     "<h2 >" + data.Experiences[i].header + "</h2>" + "<p>" + data.Experiences[i].subheader + "</p> </div> </li>");
+                    $("#exp"+i).css('background-image', 'url(' + data.Experiences[i].photo + ')');
             });
-        }) ;
+
+        });
 }
 
 function navigatetoDetails(id) {
@@ -25,3 +28,7 @@ function navigatetoDetails(id) {
     path = path + "detail.html?" + id;
     window.location.href = path;
 }
+$(function() {
+    // See if this is a touch device
+
+});

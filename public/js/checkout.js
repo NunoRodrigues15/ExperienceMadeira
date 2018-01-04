@@ -74,10 +74,13 @@ function createCheckout() {
             $j(data.availability).each(function(i, item) {
                 if (data.availability[i].date == selectedDate) {
                     $j(data.availability[i].time).each(function(j, item) {
-                        $j("#hourPicker").append("<button class='hourButton '>" + data.availability[i].time[j].start + "</button>");
+                        $j("#hourPicker").append("<button class='hourButton'>" + "<input type='radio' class='radioHour' id='button_" + [j] + "' value='" + data.availability[i].time[j].start + "'>" +
+                            data.availability[i].time[j].start + "</button>");
                     });
                 }
             });
+
+            $j("#button_0").attr("checked", "checked");
 
             $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
             $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
@@ -88,14 +91,53 @@ function createCheckout() {
 
             $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
             $j("#checkoutPicker").append("<h3>" + data.price.value * ($j("#quantity").val()) + data.price.unit + "</h3>");
-            $j("#checkoutPicker").append("<button class='checkoutButton'>" + "Reserve já" + "</button>");
+            $j("#checkoutPicker").append("<button class='checkoutButton' onclick='confirmCheckout()'>" + "Reserve já" + "</button>");
 
         });
 }
 
-// function updateHour() {
-//     if
-// }
+function confirmCheckout() {
+    var modal = document.getElementById('confirmModal');
+    var span = document.getElementsByClassName("close")[0];
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        modal.style.display = "block";
+    }
+    var selectedDay = $j("#datepicker").datepicker("getDate");
+    var month = selectedDay.getMonth() + 1;
+    var year = selectedDay.getFullYear();
+    var day = selectedDay.getDate();
+
+    // Change format of date
+    var selectedDate = day + "/" + month + "/" + year;
+    var stringReserveDate = "Efetuou a sua Reserva para a data de "
+    document.getElementById("reserveDate").innerHTML = stringReserveDate + selectedDate;
+    var hour = document.getElementsByClassName('radioHour');
+    var selectedHour;
+    for (var i = 0; i < hour.length; i++) {
+        if (hour[i].checked) {
+            selectedHour = hour[i].value;
+        }
+    }
+    var stringReserveHour = "Às "
+    document.getElementById("reserveHour").innerHTML = stringReserveHour + selectedHour;
+    var info ="O seu pagamento deverá ser efetuado no próprio local"
+    var info2 = "Tenha uma aventura fantástica. Obrigada pela sua escolha!"
+    document.getElementById("infoReservation").innerHTML = info ;
+    document.getElementById("infoReservation2").innerHTML = info2 ;
+
+}
+
+function redirect(){
+    var pathname = window.location.pathname;
+    var splitPath = pathname.split("/");
+    var path = "";
+    for (var i = 0; i < splitPath.length - 1; i++) path = path + splitPath[i] + "/";
+    path = path + "index.html?";
+    window.location.href = path;
+}
 // function myMap() {
 //     var mapOptions = {
 //         center: new google.maps.LatLng(51.5, -0.12),
