@@ -1,7 +1,7 @@
 body {
   font-family: Avenir, sans-serif;
   margin: 2rem auto;
-  
+
 }
 h2,
 p {
@@ -25,6 +25,11 @@ ul {
   grid-auto-rows: minmax(125px, auto);
   grid-gap: .5rem;
 }
+.tilesPhoto{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
 @media screen and (min-width: 40em) {
   .boxes {
     grid-template-columns: repeat(6, 1fr);
@@ -32,7 +37,6 @@ ul {
   }
 }
 .boxes li {
-  background-image: url("../levada1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

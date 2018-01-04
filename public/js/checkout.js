@@ -23,10 +23,10 @@ function createCheckout() {
             });
 
             var experienceTitle = $j("#experienceDetailsHeader");
-            experienceTitle.append("<h3 id='experienceDetailTitle'>" + data.header + "</h3>");
-            experienceTitle.append("<p id='experienceShortDescr'>" + data.shortDescription + "</p>");
+            experienceTitle.append("<h3 id='experienceCheckoutTitle'>" + data.header + "</h3>");
+            experienceTitle.append("<p id='experienceCheckoutShortDescr'>" + data.shortDescription + "</p>");
 
-            $j("#experienceAtributes").append("<ul class='atributesList fa-ul'>" +
+            $j("#experienceCheckoutAtributes").append("<ul class='atributesList fa-ul'>" +
                 "<li><i class='fa-li fa fa-map-signs'></i>" + data.Atributs.location + "</li>" +
                 "<li><i class='fa-li fa fa-line-chart'></i>" + data.Atributs.level + "</li>" +
                 "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.category + "</li>" +

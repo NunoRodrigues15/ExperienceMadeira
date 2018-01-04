@@ -52,7 +52,19 @@
     font-size: 1.5em;
     z-index: -1 !important;
 }
-
+#experienceCheckoutTitle{
+    padding-top: 1;
+    font-size: 2.5em !important;
+    margin-bottom: 0 !important;
+}
+#experienceCheckoutShortDescr{
+    margin: 1em;
+    margin-left: 0;
+}
+#experienceCheckoutAtributes{
+    margin: 1em;
+    margin-left: 0;
+}
 #dateSelection {
     display: flex;
     flex-flow: column;
