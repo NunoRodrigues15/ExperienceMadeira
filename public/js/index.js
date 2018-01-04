@@ -7,7 +7,7 @@ $(window).ready(
 
 function createFilters() {
 
-    $.getJSON('http://localhost/projetoACR/ACR%20Code/public/mockdata/categories.json',
+    $.getJSON('http://experiencemadeira.jpborges.pt/public/mockdata/categories.json',
         function(data) {
             $("#welcomeTitle").append("<h1 id='welcomeText'> Escolha a sua próxima aventura com a Experience Madeira </h1>");
             $(data.Experiences).each(function(i, item) {

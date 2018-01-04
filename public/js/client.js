@@ -7,7 +7,7 @@ $(window).ready(
 
 function createTiles() {
 
-    $.getJSON('http://localhost/projetoACR/ACR%20Code/public/mockdata/experiences.json',
+    $.getJSON('http://experiencemadeira.jpborges.pt/public/mockdata/experiences.json',
         function(data) {
             $(data.Experiences).each(function(i, item) {
 
