@@ -1,18 +1,18 @@
 $(window).ready(
     function() {
         createFilters();
-
     }
 );
 
 function createFilters() {
+    $("#welcomeTitle").append("<h1 id='welcomeText'> Escolha a sua próxima aventura com a Experience Madeira </h1>");
 
-    $.getJSON('http://experiencemadeira.jpborges.pt/public/mockdata/categories.json',
+    $.getJSON('http://experiencemadeira.jpborges.pt/public/categories',
         function(data) {
-            $("#welcomeTitle").append("<h1 id='welcomeText'> Escolha a sua próxima aventura com a Experience Madeira </h1>");
+
             $(data.Experiences).each(function(i, item) {
                 $("#categories").append("<button class='categoryButton flexButton' onClick='redirect()'>" +
-                "<i class='fa "+data.Experiences[i].icon+"' aria-hidden='true'></i>"+ data.Experiences[i].name + "</button>");
+                "<i class='fa "+data[i].description+"' aria-hidden='true'></i>"+ data[i].name + "</button>");
             });
             $("#search").append("<button class='searchButton' onClick='redirect()'>"+ "<i class='fa fa-search iconSearch' aria-hidden='true'></i>" + "Pesquisar" +"</button>");
 });
