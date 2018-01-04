@@ -40,12 +40,8 @@ function createCheckout() {
                 availableDates.push(data.availability[i].date);
             });
             var $j = jQuery.noConflict();
-
-
             // Initialize datepicker
             var today = new Date();
-
-
             $j('#datepicker').datepicker({
 
                 minDate: today,
@@ -65,14 +61,25 @@ function createCheckout() {
                     return [true];
                 }
             });
+            $j(".hourSelectionTitle").append("<h1> Selecione a hora a reservar: </h1>");
+            var unformatedDate = $j("#datepicker").datepicker("getDate");
+            var month = unformatedDate.getMonth() + 1;
+            var year = unformatedDate.getFullYear();
+            var day = unformatedDate.getDate();
+
+            // Change format of date
+            var selectedDate = day + "/" + month + "/" + year;
 
 
-            //     $(".hourSelectionTitle").append("<h1> Selecione a hora a reservar: </h1>");
-            //
-            //     $("#hourPicker").append("<div class=''> " + "<button class='hourButton '>" + "</button>" + "</div");
+            $j(data.availability).each(function(i, item) {
+                if (data.availability[i].date == selectedDate) {
+                    $j(data.availability[i].time).each(function(j, item) {
+                        $j("#hourPicker").append("<button class='hourButton '>" + data.availability[i].time[j].start + "</button>");
+                    });
+                }
+            });
+
         });
-
-
 }
 
 // function updateHour() {

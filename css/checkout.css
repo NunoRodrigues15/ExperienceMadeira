@@ -1,5 +1,7 @@
 .bodyContainer {
     z-index: -1 !important;
+    display: flex;
+    flex-flow: row;
 }
 
 .borderSection {
@@ -14,12 +16,17 @@
 }
 
 .col-left {
-    width: 70%;
+    width: 60%;
+    margin:10px;
+    border: 2px solid #007D8C;
+    border-radius: 8px;
+
 }
 
 .col-right {
-    width: 29%;
-    border-left: 1px solid grey;
+    float: right;
+    width: 35%;
+
 }
 
 .carousel {
@@ -27,13 +34,13 @@
     width: 100%;
     padding: 4px;
     color: #333;
-    background: #419be0;
+    background: #007D8C;
     float: right;
 }
 
 .slick-slide {
     text-align: center;
-    color: #419be0;
+    color:#007D8C;
     background: white;
 }
 
@@ -65,8 +72,38 @@
     justify-content: center;
     font-size: 1em;
 }
-.highlightAvailableDates a{
-    background-color: #80aaff !important;
+
+.highlightAvailableDates a {
+    background-color: #79CCCD !important;
     color: #ffffff !important;
+}
+
+#hourSelection {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.hourSelectionTitle {
+    justify-content: center;
+    font-size: 1em !important;
+    padding-bottom: 0 !important;
+}
+#hourPicker{
+display: flex;
+flex-flow: row;
+}
+.hourButton{
+    background-color: #007D8C;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
 
 }
