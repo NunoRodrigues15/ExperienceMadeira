@@ -55,7 +55,7 @@ class experiencesController extends Controller
             ->leftJoin('locations', 'experiences.locations_id', '=', 'locations.id')
             ->leftJoin('requirements', 'experiences.requirements_id', '=', 'requirements.id')
             ->leftJoin('experience_images', 'experiences.experience_images_id', '=', 'experience_images.id')
-            ->select('experiences.name ',
+            ->select('experiences.name',
                     'experiences.description',
                     'experiences.short_description',
                     'experiences.start_date',
