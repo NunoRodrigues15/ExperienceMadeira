@@ -48,23 +48,27 @@ class reservationsController extends Controller
             if($isUser == 1){
                 $reservations = DB::table('reservations')
                     ->leftJoin('experiences', 'reservations.experiences_id', '=', 'experiences.id')
-                    ->select('reservations.*'
-                    )
+                    ->select('reservations.*')
                     ->where('reservations.user_id', '=', $id)
                     ->get();
+
+                    return view('reservations');
             }else if($isColaborator == 1){
                 $reservations = DB::table('reservations')
                     ->leftJoin('experiences', 'reservations.experiences_id', '=', 'experiences.id')
                     ->leftJoin('companies', 'companies.id', '=', 'experiences.company_id')
                     ->select('reservations.*')
                     ->where('companies.user_id', '=', $id)
-                    
                     ->get();
+
+                    return view('reservations');
             }else if($isAdmin == 1){
                 $reservations = DB::table('reservations')->get();
-            }
 
-            return $reservations;
+                return view('reservations');
+            }else{
+                return view('home');
+            }
     }
 
     /**
