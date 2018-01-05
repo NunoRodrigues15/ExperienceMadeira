@@ -138,26 +138,21 @@ function redirect() {
     window.location.href = path;
 }
 
-function isNumeric(n) {
-    return !isNaN(parseFloat(n)) && isFinite(n);
-}
 
-
-
-
-
-
-
-
-$("#quantity").bind('keyup change click', function (e) {
-    if (! $(this).data("previousValue") || $(this).data("previousValue") != $(this).val()){
+$j("#quantity").bind('keyup change click', function (e) {
+    if (! $j(this).data("previousValue") || $j(this).data("previousValue") != $j(this).val()){
 
         $j("#h3priceid").html = pricePerPerson * ($j("#quantity").val()) + " €"
 
-        $(this).data("previousValue", $(this).val());
+        $j(this).data("previousValue", $j(this).val());
    }
 
 });
+Date.prototype.addDays = function(days) {
+    var dat = new Date(this.valueOf())
+    dat.setDate(dat.getDate() + days);
+    return dat;
+}
 function getDates(startDate, stopDate) {
     var dateArray = new Array();
     var currentDate = startDate;
@@ -167,8 +162,6 @@ function getDates(startDate, stopDate) {
     }
     return dateArray;
 }
-Date.prototype.addDays = function(days) {
-    var dat = new Date(this.valueOf())
-    dat.setDate(dat.getDate() + days);
-    return dat;
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
 }
