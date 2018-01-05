@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\company;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CompaniesController extends Controller
 {
@@ -18,7 +19,19 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        return view('companies');
+        $id = Auth::id();
+
+        $experienceResult = DB::table('users')
+            ->join('roles', 'users.role_id', '=', 'role.id')
+            ->select('user.*'
+            )
+            ->where([
+                ['user.id', '=', $id],
+                ['role.id', '=', 1]
+            ])
+            ->get();
+
+        return $experienceResult;//view('companies');
     }
 
     /**
