@@ -58,7 +58,6 @@ class reservationsController extends Controller
                     ->leftJoin('companies', 'companies.user_id', '=', 'experiences.id')
                     ->select('reservations.*'
                     )
-                    ->where('reservations.user_id', '=', $id)
                     ->get();
             }else if($isAdmin == 1){
                 $reservations = DB::table('reservations')->get();
