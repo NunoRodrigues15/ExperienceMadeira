@@ -72,12 +72,14 @@ function createCheckout() {
             $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
             $j("#checkoutPicker").append("<h3 id='h3priceid'>" + data.price + " €</h3>");
             $j("#checkoutPicker").append("<button class='checkoutButton' onclick='confirmCheckout()'>" + "Reserve já" + "</button>");
-            pricePerPerson = data.price;
-            $(document).on("change, mouseup, keyup", "#quantity", updatePrice);
+
 
             $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
             $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
             $j("#nReservationPicker").append("<input type='number' id='quantity' class='nReservation' min='1' max'" + data.max_people + "' value='1'>");
+
+            pricePerPerson = data.price;
+            $(document).on("change, mouseup, keyup", "#quantity", updatePrice);
         });
 
 
