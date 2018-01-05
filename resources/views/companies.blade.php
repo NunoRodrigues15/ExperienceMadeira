@@ -1,4 +1,4 @@
-
+<!-- 
 <style>
 input[type=text], select {
     width: 50%;
@@ -60,7 +60,7 @@ div {
     background-color: #f2f2f2;
     margin: 1em;
 }
-</style>
+</style> -->
     @extends('layouts.app')
     @section('content')
   <form role="form" method="POST" action="{{ url('/companies') }}">
