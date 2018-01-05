@@ -39,19 +39,19 @@ function createExperiences() {
             $("#priceSection").append("<div class='dateButton'> " + "<button class='button buttonPos' onclick=navigatetoCheckout('" + window.location.search.substring(1) + "')>Ver datas</button>" + "</div");
 
             var carousel = $('.carouselItems');
-
             carousel.append("<div>" + " <img src='" + data.experience_images_cover + "'></img>" + "</div>");
             carousel.append("<div>" + " <img src='" + data.experience_images_img1 + "'></img>" + "</div>");
             carousel.append("<div>" + " <img src='" + data.experience_images_img2 + "'></img>" + "</div>");
+            carousel.slick({
+                slidesToShow: 1,
+                dots: true,
+                arrows: true
+            });
 
             myMap(data.locations_coord_x, data.locations_coord_y);
 
         });
-    carousel.slick({
-        slidesToShow: 1,
-        dots: true,
-        arrows: true
-    });
+
 
     $(".fb-comments").attr("data-href", window.location.href);
     $(".fb-comments").attr("data-width", $(".col-right").width());
