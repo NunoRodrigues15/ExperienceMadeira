@@ -56,9 +56,9 @@ class reservationsController extends Controller
                 $reservations = DB::table('reservations')
                     ->leftJoin('experiences', 'reservations.experiences_id', '=', 'experiences.id')
                     ->leftJoin('companies', 'companies.id', '=', 'experiences.company_id')
-                    ->select('reservations.*'
+                    ->select('reservations.*')
                     ->where('companies.user_id', '=', $id)
-                    )
+                    
                     ->get();
             }else if($isAdmin == 1){
                 $reservations = DB::table('reservations')->get();
