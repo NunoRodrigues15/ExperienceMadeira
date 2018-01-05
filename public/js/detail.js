@@ -9,9 +9,9 @@ $(window).ready(
 function createExperiences() {
     var url;
     if (isNumeric(window.location.search.substring(1)))
-        url = "http://experiencemadeira.jpborges.pt/public/categories/" + window.location.search.substring(1);
+        url = "http://experiencemadeira.jpborges.pt/public/experiences/" + window.location.search.substring(1);
     else
-        url = "http://experiencemadeira.jpborges.pt/public/categories/1";
+        url = "http://experiencemadeira.jpborges.pt/public/experiences/";
     $.getJSON(url,
         function(data) {
 
