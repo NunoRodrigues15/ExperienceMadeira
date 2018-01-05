@@ -15,7 +15,7 @@ function createTiles() {
         function(data) {
             $(data).each(function(i, item) {
                 var imageURL = data.experience_images_cover;
-                imageURL = imageURL.replace('\\', '');
+                imageURL = imageURL.split('\\').join('');
 
                 $("#experienceTiles").append("<li onclick=navigatetoDetails('" + data[i].id + "') class='pointer' id='exp" + i + "'> <div class='boxes__text-wrapper'>" +
 
