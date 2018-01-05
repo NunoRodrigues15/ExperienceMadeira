@@ -14,7 +14,7 @@ function createExperiences() {
         url = "http://experiencemadeira.jpborges.pt/public/experiences/";
     $.getJSON(url,
         function(data) {
-
+data = data[0];
             var experienceTitle = $("#experienceDetailsHeader");
             experienceTitle.append("<h1 id='experienceDetailTitle'>" + data.name + "</h1>");
             experienceTitle.append("<p id='experienceShortDescr'>" + data.short_description + "</p>");
