@@ -5,6 +5,7 @@ $(window).ready(
     }
 );
 var $j = jQuery.noConflict();
+var pricePerPerson;
 
 function createCheckout() {
 
@@ -69,8 +70,9 @@ function createCheckout() {
             });
 
             $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
-            $j("#checkoutPicker").append("<h3>" + data.price * ($j("#quantity").val()) + data.price_unit + "</h3>");
+            $j("#checkoutPicker").append("<h3 id='h3priceid'>" + data.price  + " €</h3>");
             $j("#checkoutPicker").append("<button class='checkoutButton' onclick='confirmCheckout()'>" + "Reserve já" + "</button>");
+            pricePerPerson = data.price;
 
             $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
             $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
@@ -147,7 +149,15 @@ function isNumeric(n) {
 
 
 
+$("#quantity").bind('keyup change click', function (e) {
+    if (! $(this).data("previousValue") || $(this).data("previousValue") != $(this).val()){
 
+        $j("#h3priceid").html = pricePerPerson * ($j("#quantity").val()) + " €"
+
+        $(this).data("previousValue", $(this).val());
+   }
+
+});
 function getDates(startDate, stopDate) {
     var dateArray = new Array();
     var currentDate = startDate;
