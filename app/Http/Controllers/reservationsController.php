@@ -53,7 +53,7 @@ class reservationsController extends Controller
                     ->get();
 
                     return View::make('reservations.index')
-                                ->with('$reservations', $nerds);
+                                ->with('reservations', $reservations);
             }else if($isColaborator == 1){
                 $reservations = DB::table('reservations')
                     ->leftJoin('experiences', 'reservations.experiences_id', '=', 'experiences.id')
@@ -62,12 +62,13 @@ class reservationsController extends Controller
                     ->where('companies.user_id', '=', $id)
                     ->get();
 
-                    return view('reservations');
+                    return View::make('reservations.index')
+                                ->with('reservations', $reservations);
             }else if($isAdmin == 1){
                 $reservations = DB::table('reservations')->get();
 
                 return View::make('reservations.index')
-                            ->with('$reservations', $nerds);
+                            ->with('reservations', $reservations);
 
 
 
