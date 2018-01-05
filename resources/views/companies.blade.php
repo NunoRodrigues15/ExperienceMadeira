@@ -1,4 +1,4 @@
-<!-- 
+<!--
 <style>
 input[type=text], select {
     width: 50%;
@@ -64,6 +64,7 @@ div {
     @extends('layouts.app')
     @section('content')
   <form role="form" method="POST" action="{{ url('/companies') }}">
+       {{ csrf_field() }}
       <div class="">
           <label for="name">Nome da Empresa:</label>
           <input type="text" id="name" name="name" required>
