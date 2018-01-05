@@ -14,13 +14,13 @@ function createTiles() {
     $.getJSON(url,
         function(data) {
             $(data).each(function(i, item) {
-                var imageURL = data.experience_images_cover;
-                imageURL = imageURL.split('\\').join('');
+                var imageURL = data[i].experience_images_cover;
+                imageURL = imageURL.replace('\\', '');
 
                 $("#experienceTiles").append("<li onclick=navigatetoDetails('" + data[i].id + "') class='pointer' id='exp" + i + "'> <div class='boxes__text-wrapper'>" +
 
                     "<h2 >" + data[i].name + "</h2>" + "<p>" + data[i].description + "</p> </div> </li>");
-                $("#exp" + i).css('background-image', 'url(' + data.experience_images_cover + ')');
+                $("#exp" + i).css('background-image', 'url(' + data[i].experience_images_cover + ')');
             });
 
         });
