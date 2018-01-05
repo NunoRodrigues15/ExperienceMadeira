@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class CompaniesController extends Controller
 {
+
+    /**
+     * Where to redirect users after registration.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/home';
+
+    
     public function __construct()
     {
         $this->middleware('auth');
