@@ -30,7 +30,7 @@ class CompaniesController extends Controller
                 ['users.id', '=', $id],
                 ['roles.id', '=', 1]
             ])
-            ->get();
+            ->get()->count();
 
         return $experienceResult;//view('companies');
     }
