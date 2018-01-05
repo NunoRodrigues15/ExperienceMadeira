@@ -48,10 +48,39 @@ class experiencesController extends Controller
      */
     public function show(experience $experience)
     {
-        $experienceResult = experience::find($experience->id);
+        $experienceResult = DB::table('experiences')
+            ->leftJoin('companies', 'experiences.company_id', '=', 'companies.id')
+            ->leftJoin('categories', 'experiences.categories_id', '=', 'categories.id')
+            ->leftJoin('locations', 'experiences.locations_id', '=', 'locations.id')
+            ->leftJoin('requirements', 'experiences.requirements_id', '=', 'requirements.id')
+            ->leftJoin('experience_images', 'experiences.experience_images_id', '=', 'experience_images.id')
+            ->select('experiences.name',
+                    'experiences.description',
+                    'experiences.short_description',
+                    'experiences.start_date',
+                    'experiences.end_date',
+                    'experiences.weekend_open',
+                    'experiences.level',
+                    'experiences.duration',
+                    'experiences.price',
+                    'experiences.price_unit',
+                    'experiences.max_people',
+                    'companies.name',
+                    'categories.name',
+                    'experience_images.cover',
+                    'experience_images.img1',
+                    'experience_images.img2',
+                    'locations.name',
+                    'locations.coord_x',
+                    'locations.coord_y',
+                    'locations.typical_weather',
+                    'requirements.equipment',
+                    'requirements.age',
+                    'requirements.other'
+            )
+            ->get();
 
-        $locationResult = location::find($experienceResult->locations_id);
-        return response($locationResult, 200);
+        return response($experienceResult, 200);
     }
 
     /**
