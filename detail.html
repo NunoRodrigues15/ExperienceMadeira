@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Experience Madeira">
+    <meta name="author" content="João Borges, Mariana Rodrigues">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Experience Madeira</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+</head>
+
+<body>
+    <div class="s-layout">
+        <div class="s-layout__sidebar">
+            <a class="s-sidebar__trigger" href="#0">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <nav class="s-sidebar__nav">
+                <ul>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="http://experiencemadeira.jpborges.pt">
+                          <i class="fa fa-home"></i><em>Home</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="http://experiencemadeira.jpborges.pt/public/login">
+                            <i class="fa fa-user"></i><em>My Profile</em>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <main class="s-layout__content">
+            <div class="bodyContainer">
+
+                <div class="col-left">
+
+                    <div class="borderSection" id="experienceDetailsHeader">
+
+                    </div>
+
+                    <div class="borderSection" id="experienceAtributes">
+
+                    </div>
+
+                    <div class="borderSection" id="experienceDescription">
+
+                    </div>
+
+                    <div class="borderSection" id="experienceRequirements">
+
+                    </div>
+
+                    <div id="mapSection">
+                        <h2>Onde estaremos:</h2>
+                        <div id="map" style="width:400px;height:400px;"></div>
+                    </div>
+                </div>
+
+                <div class="col-right">
+
+                    <div class='carousel'>
+                        <div class='carouselItems'>
+
+                        </div>
+                    </div>
+
+                    <div class="priceContainer borderSection" id="priceSection">
+
+
+                    </div>
+
+                    <div class="fb-comments" data-href="http://experiencemadeira.jpborges.pt/mockdata/LevadaDoRibeiroFrio/" data-width="41%" data-numposts="5"></div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+    <footer class="s-footer">
+        <p>Footer</p>
+    </footer>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzNHhl7WFIxZrDjmbO347oKOpYYgEqb44&callback=myMap"></script>
+    <script src="js/detail.js"></script>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+
+</html>

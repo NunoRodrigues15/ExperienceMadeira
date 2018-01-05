@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Experience Madeira">
+    <meta name="author" content="João Borges, Mariana Rodrigues">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Experience Madeira</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+
+<body>
+    <div class="s-layout">
+        <div class="s-layout__sidebar">
+            <a class="s-sidebar__trigger" href="#0">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <nav class="s-sidebar__nav">
+                <ul>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="http://experiencemadeira.jpborges.pt">
+                          <i class="fa fa-home"></i><em>Home</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="http://experiencemadeira.jpborges.pt/public/login">
+                            <i class="fa fa-user"></i><em>My Profile</em>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <main class="s-layout__content">
+            <div class="bodyContainer">
+
+                <div class="col-left">
+                    <div id="dateSelection">
+                        <div class="borderSection dateSelectionTitle"></div>
+                        <div id="datepicker"></div>
+                    </div>
+                    <div id="hourSelection">
+                        <div class="borderSection hourSelectionTitle"></div>
+                        <div id="hourPicker"></div>
+                    </div>
+                    <div id="nReservationSelection">
+                        <div class="borderSection nReservationSelectionTitle"></div>
+                        <div >
+                            <form action="" id="nReservationPicker">
+
+                            </form>
+
+                        </div>
+                    </div>
+                    <div id="checkoutSelection">
+                        <div class="borderSection checkoutSelectionTitle"></div>
+                        <div id="checkoutPicker"></div>
+                    </div>
+                    <div id="confirmModal" class="modal">
+                        <div class="modal-content">
+                            <i class="fa fa-check iconConfirm" aria-hidden="true"></i>
+                            <p id="reserveDate"> </p>
+                            <p id="reserveHour"> </p>
+                            <p id="infoReservation"> </p>
+                            <p id="infoReservation2"> </p>
+                            <button class="concludeButton" onclick="redirect()"> <i class="fa fa-check " aria-hidden="true"></i>Concluído </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-right">
+                    <div class='carousel'>
+                        <div class='carouselItems'>
+
+                        </div>
+                    </div>
+                    <div id="experienceDetailsHeader">
+
+                    </div>
+                    <div id="experienceCheckoutAtributes">
+
+                    </div>
+                </div>
+
+        </main>
+
+        </div>
+        <footer class="s-footer">
+            <p>Footer</p>
+        </footer>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzNHhl7WFIxZrDjmbO347oKOpYYgEqb44&callback=myMap"></script> -->
+        <script src="js/checkout.js"></script>
+</body>
+
+</html>
