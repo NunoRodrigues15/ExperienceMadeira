@@ -79,7 +79,7 @@ function createCheckout() {
             $j("#nReservationPicker").append("<input type='number' id='quantity' class='nReservation' min='1' max'" + data.max_people + "' value='1'>");
 
             pricePerPerson = data.price;
-            $(document).on("change, mouseup, keyup", "#quantity", updatePrice);
+            $j(document).on("change, mouseup, keyup", "#quantity", updatePrice);
         });
 
 
