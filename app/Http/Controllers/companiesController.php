@@ -22,7 +22,7 @@ class CompaniesController extends Controller
     {
         $id = Auth::id();
 
-        $experienceResult = DB::table('users')
+        $isAdmin = DB::table('users')
             ->join('roles', 'users.role_id', '=', 'roles.id')
             ->select('users.*'
             )
@@ -31,8 +31,12 @@ class CompaniesController extends Controller
                 ['roles.id', '=', 1]
             ])
             ->get()->count();
+            if($isAdmin > 0){
+                return view('companies');
+            }else{
+                return view('home');
+            }
 
-        return $experienceResult;//view('companies');
     }
 
     /**
