@@ -23,12 +23,12 @@ class CompaniesController extends Controller
         $id = Auth::id();
 
         $experienceResult = DB::table('users')
-            ->join('roles', 'users.role_id', '=', 'role.id')
-            ->select('user.*'
+            ->join('roles', 'users.role_id', '=', 'roles.id')
+            ->select('users.*'
             )
             ->where([
-                ['user.id', '=', $id],
-                ['role.id', '=', 1]
+                ['users.id', '=', $id],
+                ['roles.id', '=', 1]
             ])
             ->get();
 
