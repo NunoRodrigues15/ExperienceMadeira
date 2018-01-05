@@ -72,6 +72,7 @@ class experiencesController extends Controller
                     'experiences.duration',
                     'experiences.price',
                     'experiences.price_unit',
+                    'experiences.max_people',
                     'companies.name AS companies_name',
                     'categories.name AS categories_name',
                     'experience_images.cover AS experience_images_cover',

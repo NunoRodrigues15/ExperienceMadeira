@@ -71,6 +71,10 @@ function createCheckout() {
             $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
             $j("#checkoutPicker").append("<h3>" + data.price * ($j("#quantity").val()) + data.price_unit + "</h3>");
             $j("#checkoutPicker").append("<button class='checkoutButton' onclick='confirmCheckout()'>" + "Reserve já" + "</button>");
+
+            $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
+            $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
+            $j("#nReservationPicker").append("<input type='number' id='quantity' class='nReservation' min='1' max'" + data.max_people + "' value='1'>");
         });
 
 
@@ -85,9 +89,7 @@ function createCheckout() {
 
             $j("#button_0").attr("checked", "checked");
 
-            $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
-            $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
-            $j("#nReservationPicker").append("<input type='number' id='quantity' class='nReservation' min='1' max'5' value='1'>");
+
         });
 }
 
