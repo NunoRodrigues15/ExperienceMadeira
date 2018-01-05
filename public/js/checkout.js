@@ -70,9 +70,10 @@ function createCheckout() {
             });
 
             $j(".checkoutSelectionTitle").append("<h1> Reserve já o seu pedido: </h1>");
-            $j("#checkoutPicker").append("<h3 id='h3priceid'>" + data.price  + " €</h3>");
+            $j("#checkoutPicker").append("<h3 id='h3priceid'>" + data.price + " €</h3>");
             $j("#checkoutPicker").append("<button class='checkoutButton' onclick='confirmCheckout()'>" + "Reserve já" + "</button>");
             pricePerPerson = data.price;
+            $(document).on("change, mouseup, keyup", "#quantity", updatePrice);
 
             $j(".nReservationSelectionTitle").append("<h1> Selecione o número de pessoas participantes: </h1>");
             $j("#nReservationPicker").append("<i class='fa fa-male iconPerson' aria-hidden='true'></i>");
@@ -139,17 +140,17 @@ function redirect() {
 }
 
 
-function updatePrice(){
+function updatePrice() {
     $j("#h3priceid").html = pricePerPerson * ($j("#quantity").val()) + " €"
 }
 
-});
-$(document).on("change, mouseup, keyup", "#quantity", updatePrice);
+
 Date.prototype.addDays = function(days) {
     var dat = new Date(this.valueOf())
     dat.setDate(dat.getDate() + days);
     return dat;
 }
+
 function getDates(startDate, stopDate) {
     var dateArray = new Array();
     var currentDate = startDate;
@@ -159,6 +160,7 @@ function getDates(startDate, stopDate) {
     }
     return dateArray;
 }
+
 function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
