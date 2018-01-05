@@ -20,6 +20,7 @@ class experiencesController extends Controller
             ->leftJoin('experience_images', 'experiences.experience_images_id', '=', 'experience_images.id')
             ->select('experiences.name',
                     'experiences.description',
+                    'experiences.id',
                     'experience_images.cover AS experience_images_cover'
             )
             ->get();
