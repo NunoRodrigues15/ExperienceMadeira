@@ -68,12 +68,10 @@ class experiencesController extends Controller
                     'experiences.short_description',
                     'experiences.start_date',
                     'experiences.end_date',
-                    'experiences.weekend_open',
                     'experiences.level',
                     'experiences.duration',
                     'experiences.price',
                     'experiences.price_unit',
-                    'experiences.max_people',
                     'companies.name AS companies_name',
                     'categories.name AS categories_name',
                     'experience_images.cover AS experience_images_cover',
@@ -84,8 +82,7 @@ class experiencesController extends Controller
                     'locations.coord_y AS locations_coord_y',
                     'locations.typical_weather AS locations_typical_weather',
                     'requirements.equipment AS requirements_equipment',
-                    'requirements.age AS requirements_age',
-                    'requirements.other AS requirements_other'
+                    'requirements.age AS requirements_age'
             )
             ->where('experiences.id', '=', $experience->id)
             ->get();
