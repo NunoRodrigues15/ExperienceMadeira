@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('content')
+
 <style>
 input[type=text], select {
     width: 50%;
@@ -62,8 +61,8 @@ div {
     margin: 1em;
 }
 </style>
-<body>
-<div>
+    @extends('layouts.app')
+    @section('content')
   <form role="form" method="POST" action="{{ url('/companies') }}">
       <div class="">
           <label for="name">Nome da Empresa:</label>
