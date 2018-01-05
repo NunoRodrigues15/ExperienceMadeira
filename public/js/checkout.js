@@ -139,7 +139,7 @@ function redirect() {
 }
 
 
-$j("#quantity").bind('keyup change click', function (e) {
+$j(":input").bind('keyup change click', function (e) {
     if (! $j(this).data("previousValue") || $j(this).data("previousValue") != $j(this).val()){
 
         $j("#h3priceid").html = pricePerPerson * ($j("#quantity").val()) + " €"
