@@ -64,3 +64,6 @@ function navigatetoCheckout(id) {
     path = path + "checkout.html?" + id;
     window.location.href = path;
 }
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
