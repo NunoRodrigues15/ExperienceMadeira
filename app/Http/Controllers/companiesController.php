@@ -17,7 +17,7 @@ class CompaniesController extends Controller
      */
     protected $redirectTo = '/home';
 
-    
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -59,6 +59,7 @@ class CompaniesController extends Controller
             'user_id' => $data['user_id'],
             'description' => $data['description'],
             'name' => $data['name']
+
         ]);
     }
 

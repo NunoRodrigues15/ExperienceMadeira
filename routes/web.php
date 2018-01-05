@@ -19,13 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('avatars', 'avatarsController');
 Route::resource('categories', 'categoriesController');
-Route::resource('companies', 'companiesController');
 Route::resource('experiences', 'experiencesController');
-Route::resource('experiencesimages', 'experiencesimagesController');
-Route::resource('locations', 'locationsController');
-Route::resource('requirements', 'requirementsController');
 Route::resource('reservations', 'reservationsController');
-Route::resource('time_schedules', 'time_schedulesController');
-Route::resource('users', 'usersController');
