@@ -7,40 +7,44 @@ $(window).ready(
 );
 
 function createExperiences() {
-
-    $.getJSON('http://experiencemadeira.jpborges.pt/public/mockdata/' + window.location.search.substring(1) + '.json',
+    var url;
+    if (isNumeric(window.location.search.substring(1)))
+        url = "http://experiencemadeira.jpborges.pt/public/categories/" + window.location.search.substring(1);
+    else
+        url = "http://experiencemadeira.jpborges.pt/public/categories/1";
+    $.getJSON(url,
         function(data) {
 
             var experienceTitle = $("#experienceDetailsHeader");
-            experienceTitle.append("<h1 id='experienceDetailTitle'>" + data.header + "</h1>");
-            experienceTitle.append("<p id='experienceShortDescr'>" + data.shortDescription + "</p>");
+            experienceTitle.append("<h1 id='experienceDetailTitle'>" + data.name + "</h1>");
+            experienceTitle.append("<p id='experienceShortDescr'>" + data.short_description + "</p>");
 
             $("#experienceAtributes").append("<ul class='atributesList fa-ul'>" +
-                "<li><i class='fa-li fa fa-map-signs'></i>" + data.Atributs.location + "</li>" +
-                "<li><i class='fa-li fa fa-line-chart'></i>" + data.Atributs.level + "</li>" +
-                "<li><i class='fa-li fa fa-check-square'></i>" + data.Atributs.category + "</li>" +
-                "<li><i class='fa-li fa fa-clock-o'></i>" + data.Atributs.duration + "</li>" +
+                "<li><i class='fa-li fa fa-map-signs'></i>" + data.locations_name + "</li>" +
+                "<li><i class='fa-li fa fa-line-chart'></i>" + data.level + "</li>" +
+                "<li><i class='fa-li fa fa-check-square'></i>" + data.categories_name+ "</li>" +
+                "<li><i class='fa-li fa fa-clock-o'></i>" + data.duration + "</li>" +
                 "</ul>");
 
             $("#experienceDescription").append("<h2>O que iremos fazer:</h2>" +
-                "<p>" + data.longDescription + "</p>");
+                "<p>" + data.description + "</p>");
 
             $("#experienceRequirements").append("<h2>Observações:</h2>" +
                 "<ul class='fa-ul requirementsList'>" +
-                "<li><i class='fa-li fa fa-exclamation-triangle'></i>" + data.requirements.equipment + "</li>" +
-                "<li><i class='fa-li fa fa-user-o'></i>" + data.requirements.age + "</li>" +
+                "<li><i class='fa-li fa fa-exclamation-triangle'></i>" + data.requirements_equipment + "</li>" +
+                "<li><i class='fa-li fa fa-user-o'></i>" + data.requirements_age + "</li>" +
                 "</ul>");
 
 
 
-        $("#priceSection").append("<div class='price'>" + "<p>" + data.price.value + data.price.unit + " por pessoa</p>" + "<//div>");
+        $("#priceSection").append("<div class='price'>" + "<p>" + data.price + data.price_unit + " por pessoa</p>" + "<//div>");
         $("#priceSection").append("<div class='dateButton'> " + "<button class='button buttonPos' onclick=navigatetoCheckout('"+window.location.search.substring(1)+"')>Ver datas</button>" + "</div");
 
         var carousel = $('.carouselItems');
 
-        $(data.image.others).each(function(i, item) {
-            carousel.append("<div>" + " <img src='" + data.image.others[i].image + "'></img>" + "</div>");
-        });
+        carousel.append("<div>" + " <img src='" + data.experience_images_cover + "'></img>" + "</div>");
+        carousel.append("<div>" + " <img src='" + data.experience_images_img1 + "'></img>" + "</div>");
+        carousel.append("<div>" + " <img src='" + data.experience_images_img2 + "'></img>" + "</div>");
 
         carousel.slick({
             slidesToShow: 1,
