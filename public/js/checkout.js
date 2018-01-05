@@ -143,7 +143,7 @@ function redirect() {
 
 
 function updatePrice() {
-    $j("#h3priceid").html = pricePerPerson * ($j("#quantity").val()) + " €"
+    h3priceid.innerText = pricePerPerson * ($j("#quantity").val()) + " €";
 }
 
 
