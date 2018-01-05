@@ -53,7 +53,7 @@ class time_schedulesController extends Controller
             ->select('time_schedules.id',
                     'time_schedules.start_time'
             )
-            ->where('experiences', '=', $id)
+            ->where('experiences.id', '=', $id)
             ->get();
 
         return response($timeTable, 200);
